@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Rockpaperscissors {
 
+    //@TODO: If the fields are not declared as private they can be manipulated from outside
     Player Rickard;
     Fist aifist;
 
@@ -20,6 +21,7 @@ public class Rockpaperscissors {
         game.playgame();
     }
 
+    //@FIXME: if you want to use these as global fields they should be declared up top, if you want them as local variables they should be declared within playgame()'s scope
     int aiscore = 0;
     int score = 0;
 
@@ -30,6 +32,7 @@ public class Rockpaperscissors {
             Scanner scanner = new Scanner(System.in);
             val = scanner.nextInt();
             int fist = aifist.play();
+
             if (val > 3 || val < 1) {
                 i = i - 1;
                 System.out.println("Only the numbers 1,2,3 are available. Rock(1), Paper(2) or Scissors(3)?");
